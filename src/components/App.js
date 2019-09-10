@@ -11,8 +11,8 @@ const filterFilms = (films, filter) => {
 
 class App extends Component {
   state = {
+    filter: '',
     films: items,
-    filter: ' ',
   };
 
   changedFilter = e => {
@@ -20,7 +20,7 @@ class App extends Component {
   };
 
   render() {
-    const { films, filter } = this.state;
+    const { filter, films } = this.state;
     const filteredFilms = filterFilms(films, filter);
     return (
       <div>
